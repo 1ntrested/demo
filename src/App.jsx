@@ -4,12 +4,11 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import './App.css'
 import Appbar from './components/Appbar/Appbar.jsx';
 import Home from "./components/Home/Home.jsx";
-import Mywork from "./components/Mywork/Mywork.jsx";
-//import Experience from "./components/Experience.jsx";
-const Experience=lazy(()=>import('./components/Experience/Experience.jsx'))
-import Aboutme from './components/Aboutme/Aboutme.jsx';
+const Experience=lazy(()=>import('./components/Courses/Courses.jsx'))
 import Footer from "./components/Footer/Footer.jsx";
 import { createContext } from "react";
+import Signup from "./components/Signup/Signup.jsx";
+import Login from "./components/Login/Login.jsx";
 
 export const ThemeContext=createContext(null);
 
@@ -27,9 +26,9 @@ function App() {
     <Suspense key={theme} fallback={<div>Loading...</div>}>
       <Routes>
         <Route path="/" element={<Home />} />  
-        <Route path="/aboutme" element={<Aboutme />} /> 
-        <Route path="/mywork" element={<Mywork />} /> 
-        <Route path="/experience" element={<Experience />} /> 
+        <Route path="/courses" element={<Experience />} /> 
+        <Route path="/signup" element={<Signup />} /> 
+        <Route path="/login" element={<Login />} /> 
       </Routes>
       </Suspense>
     </BrowserRouter>

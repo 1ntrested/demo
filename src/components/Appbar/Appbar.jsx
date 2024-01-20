@@ -10,9 +10,9 @@ function Appbar() {
     <div className='navbar'>
       <ul className='navbar'>
         <li><Link className='nav-tags' to='/'>home</Link></li>
-        <li><Link className='nav-tags' to='/aboutme'>about me</Link></li>
-        <li><Link className='nav-tags' to='/mywork'>my work</Link></li>
-        <li><Link className='nav-tags' to='/experience'>experience</Link></li>
+        <li><Link className='nav-tags' to='/courses'>courses</Link></li>
+        <li><Link className='nav-tags' to='/signup'>Signup</Link></li>
+        <li><Link className='nav-tags' to='/login'>Login</Link></li>
         {/* <Switch  color="default" onChange={toggleTheme} checked={theme==='light'}/> */}
         <li><span style={{cursor:'pointer'}} onClick={toggleTheme}>{theme==='light'?'🌑':'🌕'}</span></li>
       </ul>
